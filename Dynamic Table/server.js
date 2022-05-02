@@ -14,8 +14,9 @@ function tableRowData(values, tag) {
     var outer_div = document.createElement("div");
     var dy_table = document.createElement("table");
     dy_table.setAttribute("border", "1");
-    dy_table.setAttribute("class", "table")
+    dy_table.setAttribute("class", "table table-striped table-bordered")
     var dy_table_head = document.createElement("thead");
+    dy_table_head.setAttribute("class", "thead-dark")
     var dy_table_body = document.createElement("tbody");
     dy_table.appendChild(dy_table_head);
     dy_table.appendChild(dy_table_body);
