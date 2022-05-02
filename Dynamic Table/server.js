@@ -4,7 +4,7 @@ function tableRowData(values, tag) {
     var dy_table_head_row = document.createElement("tr");
     for (var i = 0; i < values.length; ++i) {
         var dy_table_head = document.createElement(tag);
-        dy_table_head.innerHTML = values[i];
+        dy_table_head.appendChild(document.createTextNode(values[i]));
         dy_table_head_row.appendChild(dy_table_head);
     }
     return dy_table_head_row;
@@ -16,7 +16,6 @@ function tableRowData(values, tag) {
     dy_table.setAttribute("border", "1");
     dy_table.setAttribute("class", "table table-striped table-bordered")
     var dy_table_head = document.createElement("thead");
-    dy_table_head.setAttribute("class", "thead-dark")
     var dy_table_body = document.createElement("tbody");
     dy_table.appendChild(dy_table_head);
     dy_table.appendChild(dy_table_body);
